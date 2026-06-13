@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Arena</title>
+    <link rel="stylesheet" href="style.css?v=arena5">
+</head>
+<body>
+    <div class="versionBadge">Ascension Build</div>
+
+    <header class="gameHeader">
+        <p class="wave">Wave 1</p>
+        <p class="defeated">Defeated: 0</p>
+    </header>
+
+    <section class="featureStrip">
+        <span>Boss waves</span>
+        <span>Crits</span>
+        <span>Armor</span>
+        <span>Potions</span>
+        <span>Scaling enemies</span>
+    </section>
+
+    <div id="playGround">
+        <div class="leftBox">
+            <h2 class="player">Player</h2>
+            <div class="portraitFrame">
+                <img class="playerPortrait" src="https://images.unsplash.com/photo-1534863329642-74f3c48d1c4a?auto=format&fit=crop&w=900&q=80" alt="Armored player warrior">
+            </div>
+            <div class="healthBar"><span class="playerHealthFill"></span></div>
+            <p class="hp">Health: 120/120</p>
+            <p class="playerAp">Attack power: 18</p>
+            <p class="playerArmor">Armor: 0</p>
+            <p class="playerGold">Gold: 0</p>
+            <p class="playerXp">XP: 0/30</p>
+            <p class="playerLevel">Level: 1</p>
+            <p class="playerPotions">Potions: 2</p>
+            <p class="playerWeapon">Weapon: Training sword</p>
+        </div>
+
+        <div class="rightBox">
+            <h2 class="enemy">Enemy</h2>
+            <div class="portraitFrame">
+                <img class="enemyPortrait" src="https://images.unsplash.com/photo-1600081522768-cb2e80ed4491?auto=format&fit=crop&w=900&q=80" alt="Enemy warrior">
+            </div>
+            <div class="healthBar"><span class="enemyHealthFill"></span></div>
+            <p class="enemyHp">Health: 0/0</p>
+            <p class="enemyAp">Attack power: 0</p>
+            <p class="enemyGold">Gold: 0</p>
+            <p class="enemyLevel">Level: 1</p>
+            <p class="enemyWeapon">Weapon: Unknown</p>
+        </div>
+    </div>
+
+    <div id="actions">
+        <button onclick="attack()">Attack</button>
+        <button onclick="heavyAttack()">Heavy Attack</button>
+        <button onclick="defend()">Defend</button>
+        <button onclick="usePotion()">Potion</button>
+        <button onclick="openShop()">Shop</button>
+        <button onclick="showGiveUpModal()">Give up</button>
+    </div>
+
+    <div id="log">
+        <p class="dmgLog"></p>
+        <div id="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p class="modalText">Some text in the Modal..</p>
+                <div class="shopItems"></div>
+                <button class="confirmButton" onclick="restartGame()">Restart</button>
+                <button class="denyButton" onclick="closeModal()">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/state.js?v=arena5"></script>
+    <script src="scripts/ui.js?v=arena5"></script>
+    <script src="scripts/shop.js?v=arena5"></script>
+    <script src="scripts/battle.js?v=arena5"></script>
+    <script src="test.js?v=arena5"></script>
+</body>
+</html>
